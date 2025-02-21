@@ -1,4 +1,4 @@
-# DataManagemantAssignment
+# Data_Management_Assignment
 This repository was created for an assignment for the Reproducible research and data management module in my Biological Sciences BSc(Honours) course at the University of Cape Town (UCT).
 
 Data used in this assignment originate from a practical in BIO3018F, a course completed in 2024. Data collection was guided by Dr Dawood Hattas on the 23rd of January 2024 in De Hoop Nature Reserve (34°26’S, 20°30’E). No lisence was placed on the data.
