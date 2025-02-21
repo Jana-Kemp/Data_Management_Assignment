@@ -1,0 +1,47 @@
+---
+title: "Data_Management_Assignment"
+author: "Jana Kemp"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+Loading and attaching needed packages
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
+
+```{r}
+dung2 <- dung %>%
+  select(-Ostrich, -Klipspringer)
+```
+
+Summarise dung type by vegetation type and view summaried data.
+Ostrich and Klipspringer were not included as they only had one and no observations respectively and therefore cannot be plotted on a boxplot
+
+```{r}
+summary_data <- dung2 %>%
+  group_by(Veg_type) %>%
+  summarise(across(Bontebok:Steenbok, sum))
+```
+
+Convert data to long format to make plotting in the next step easier
+```{r}
+long_data <- dung2 %>%
+  pivot_longer(cols = Bontebok:Steenbok, names_to = "Animal", values_to = "Count")
+```
+
+Create a pannel boxplot that shows the summarised data
+```{r}
+ggplot(long_data, aes(x = Veg_type, y = Count, fill = Veg_type)) +
+  geom_boxplot() +
+  facet_wrap(~Animal, scales = "free_y") +
+  theme_minimal() +
+  labs(title = "Dung Abundance by Animal and Vegetation Type",
+       x = "Vegetation Type",  
+       y = "Number of Dung Piles", 
+       fill = "Vegetation Type")
+```
+
