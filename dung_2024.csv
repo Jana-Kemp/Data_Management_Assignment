@@ -1,0 +1,16 @@
+﻿Veg_type,Transect,Bontebok,Eland,Ostrich,Baboon,Steenbok,Klipspringer
+Grassland,1,6,1,0,1,0,0
+Grassland,2,8,1,0,0,0,0
+Grassland,3,7,4,0,0,0,0
+Grassland,4,8,7,2,1,2,0
+Grassland,5,4,2,0,0,0,0
+Renosterveld,1,1,3,0,0,0,0
+Renosterveld,2,0,2,0,0,5,0
+Renosterveld,3,1,2,0,0,1,0
+Renosterveld,4,2,1,0,1,0,0
+Renosterveld,5,2,0,0,2,4,0
+Fynbos,1,0,1,0,0,0,0
+Fynbos,2,2,2,0,0,0,0
+Fynbos,3,1,3,0,0,0,0
+Fynbos,4,0,2,0,0,0,0
+Fynbos,5,0,1,0,0,0,0

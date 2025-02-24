@@ -13,13 +13,28 @@ library(tidyr)
 library(ggplot2)
 ```
 
+Read in data
+
+```{r}
+dung <- read.csv("dung_2024.csv")
+
+```
+
+View data. As you can see the data are already in tidy format, so not much cleaning up is required
+
+```{r}
+head(dung)
+```
+
+Remove Ostrich and Klipspringer as they only had one and no observations respectively and therefore cannot be niecly plotted on a box plot.
+
 ```{r}
 dung2 <- dung %>%
   select(-Ostrich, -Klipspringer)
 ```
 
-Summarise dung type by vegetation type and view summaried data.
-Ostrich and Klipspringer were not included as they only had one and no observations respectively and therefore cannot be plotted on a boxplot
+Summarise dung type by vegetation type and view summarised data.
+
 
 ```{r}
 summary_data <- dung2 %>%
@@ -44,4 +59,5 @@ ggplot(long_data, aes(x = Veg_type, y = Count, fill = Veg_type)) +
        y = "Number of Dung Piles", 
        fill = "Vegetation Type")
 ```
+
 
